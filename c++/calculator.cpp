@@ -8,23 +8,7 @@
 
 std::vector<double> factorial_cache = {1};
 
-bool expression_finished(std::stack<double> values, std::stack<char> ops) {
-    return values.size() == 1 && ops.empty();
-}
-
 double factorial(double n) {
-    // if (n <= 0) {
-    //     return 1;
-    // } else {
-    //     return n * factorial(n - 1);
-    // }
-
-    // double result = 1;
-    // for (int i = 1; i <= n; i++) {
-    //     result *= i;
-    // }
-    // return result;
-
     if (n < 0) {
         return NAN;
     }
@@ -34,11 +18,11 @@ double factorial(double n) {
     if (n < factorial_cache.size()) {
         return factorial_cache[n];
     }
-    double result = factorial_cache[factorial_cache.size() - 1];
+    double result = factorial_cache.back();
     for (int i = factorial_cache.size(); i <= n; i++) {
         try {
             result *= i;
-        } catch (std::exception& e) {
+        } catch (std::overflow_error& e) {
             std::cout << "Factorial overflow" << std::endl;
             std::cout << "Stopping at " << i - 1 << "! = " << result << std::endl;
             std::cout << "Error: " << e.what() << std::endl;
@@ -49,11 +33,16 @@ double factorial(double n) {
     return result;
 }
 
+bool expression_finished(std::stack<double> values, std::stack<char> ops) {
+    return values.size() == 1 && ops.empty();
+}
+
 double evaluate(std::stack<double>& values, std::stack<char>& ops) {
     if (values.size() < 1 || ops.empty()) {
         std::cout << "Not enough values or operators" << std::endl;
         return NAN;
-    } else if (values.size() == 1 && ops.empty()) {
+    } 
+    if (expression_finished(values, ops)) {
         return values.top();
     }
 
@@ -92,15 +81,12 @@ double evaluate(std::stack<double>& values, std::stack<char>& ops) {
             result = pow(a, b);
             break;
         case '!':
-            // result = tgamma(a + 1);
             result = factorial(b);
             break;
         case 'r':
-            // result = a * (180 / 3.14159265358979323846);
             result = b * (180 / M_PI);
             break;
         case 'd':
-            // result = a * (3.14159265358979323846 / 180);
             result = b * (M_PI / 180);
             break;
         case 's':
@@ -145,23 +131,24 @@ double evaluate(std::stack<double>& values, std::stack<char>& ops) {
     return result;
 }
 
-double calculate(std::string expression) {
+double calculate(const std::string& expression) {
+    if (expression.empty()) {
+        return NAN;
+    }
+
     std::stack<double> values;
     std::stack<char> ops;
     double num = 0;
     bool num_started = false;
-    // bool times_after_bracket = false;
 
-    if (expression.empty()) {
-        return NAN;
-    }
+    auto is_digit = [](char c) { return std::isdigit(c) || c == '.'; };
 
     for (char c : expression) {
         if (c == ' ') {
             continue;
         }
 
-        if (isdigit(c) || c == '.') {
+        if (is_digit(c)) {
             num_started = true;
             num = num * 10 + (c - '0');
         } else {
@@ -175,10 +162,6 @@ double calculate(std::string expression) {
                 if (values.size() == 1 && ops.empty()) {
                     ops.push('*');
                 }
-                // if (times_after_bracket) {
-                //     ops.push('*');
-                //     times_after_bracket = false;
-                // }
                 ops.push(c);
             } else if (c == ')') {
                 while (!ops.empty() && ops.top() != '(') {
@@ -187,7 +170,6 @@ double calculate(std::string expression) {
                 if (ops.empty()) {
                     return NAN;
                 }
-                // times_after_bracket = true;
                 ops.pop();
             } else if (c == '+' || c == '-') {
                 while (!ops.empty() && ops.top() != '(') {
@@ -199,87 +181,47 @@ double calculate(std::string expression) {
                     evaluate(values, ops);
                 }
                 ops.push(c);
-            } else if (c == '^') {
-                ops.push(c);
-            } else if (c == '!') {
-                ops.push(c);
+            } else if (c == '^' || c == '!' || c == 'r' || c == 'd') {
+                if (expression.substr(expression.find(c), 4) == "deg") {
+                    ops.push('d');
+                } else if (expression.substr(expression.find(c), 4) == "rad") {
+                    ops.push('r');
+                } else {
+                    ops.push(c);
+                }
             } else if (c == 'i') {
                 if (expression.substr(expression.find(c), 3) == "inf") {
                     values.push(INFINITY);
                 } else {
                     return NAN;
                 }
-            } else if (c == 'r') {
-                if (expression.substr(expression.find(c), 3) == "rad") {
-                    ops.push('r');
-                } else {
-                    return NAN;
-                }
-            } else if (c == 'd') {
-                if (expression.substr(expression.find(c), 3) == "deg") {
-                    ops.push('d');
-                } else {
-                    return NAN;
-                }
-            } else if (c == 's') {
-                if (expression.substr(expression.find(c), 4) == "sqrt") {
-                    ops.push('s');
-                } else if (expression.substr(expression.find(c), 3) == "sin") {
+            } else if (c == 's' || c == 'c' || c == 't' || c == 'a' || c == 'l') {
+                auto len = expression.size() - expression.find(c);
+                if (len == 3 && expression.substr(expression.find(c), 3) == "sin") {
                     ops.push('h');
-                } else {
-                    ops.push(c);
-                }
-            } else if (c == 'c') {
-                if (expression.substr(expression.find(c), 3) == "cos") {
+                } else if (len == 3 && expression.substr(expression.find(c), 3) == "cos") {
                     ops.push('c');
-                } else if (expression.substr(expression.find(c), 3) == "ctg") {
-                    ops.push('g');
-                } else {
-                    return NAN;
-                }
-            } else if (c == 't') {
-                if (expression.substr(expression.find(c), 3) == "tan") {
+                } else if (len == 3 && expression.substr(expression.find(c), 3) == "tan") {
                     ops.push('t');
-                } else {
-                    return NAN;
-                }
-            } else if (c == 'a') {
-                if (expression.substr(expression.find(c), 3) == "abs") {
+                } else if (len == 3 && expression.substr(expression.find(c), 3) == "ctg") {
+                    ops.push('g');
+                } else if (len == 3 && expression.substr(expression.find(c), 3) == "abs") {
                     ops.push('a');
-                } else if (expression.substr(expression.find(c), 4) == "atan") {
-                    ops.push('q');
-                } else if (expression.substr(expression.find(c), 4) == "acos") {
-                    ops.push('b');
-                } else if (expression.substr(expression.find(c), 4) == "asin") {
+                } else if (len == 4 && expression.substr(expression.find(c), 4) == "sqrt") {
+                    ops.push('s');
+                } else if (len == 4 && expression.substr(expression.find(c), 4) == "asin") {
                     ops.push('u');
-                } else {
-                    return NAN;
-                }
-            } else if (c == 'l') {
-                if (expression.substr(expression.find(c), 3) == "log") {
+                } else if (len == 4 && expression.substr(expression.find(c), 4) == "acos") {
+                    ops.push('b');
+                } else if (len == 4 && expression.substr(expression.find(c), 4) == "atan") {
+                    ops.push('q');
+                } else if (len == 4 && expression.substr(expression.find(c), 4) == "log2") {
                     ops.push('l');
-                } else if (expression.substr(expression.find(c), 3) == "ln") {
+                } else if (len == 5 && expression.substr(expression.find(c), 5) == "log10") {
                     ops.push('n');
                 } else {
                     return NAN;
                 }
-            } else if (c == 'e') {
-                values.push(2.71828182845904523536);
-            } else if (c == 'p') {
-                if (expression.substr(expression.find(c), 3) == "pi") {
-                    // values.push(3.14159265358979323846);
-                    values.push(M_PI);
-                } else {
-                    return NAN;
-                }
-            } else if (c == 'n') {
-                values.push(-1);
-            } else if (c == 'x') {
-                values.push(0);
-            } else if (c == 'y') {
-                values.push(1);
-            } else if (c == 'z') {
-                values.push(2);
             } else {
                 return NAN;
             }
@@ -337,11 +279,6 @@ double not_interactive_calculator(std::string input, bool test = false) {
 }
 
 bool test_calculator() {
-    // create test cases (create some type of dictionary to store test cases and expected results)
-    // sent the test cases to the std::string input of the not_interactive_calculator function
-    // compare the result to the expected result and print out the result
-    // return true if all tests passed, false otherwise
-
     struct test_case {
         std::string input;
         double expected_result;
