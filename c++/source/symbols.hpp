@@ -45,15 +45,17 @@ Symbol	Unicode character	Articles with usage	LaTeX	HTML	Unicode Hex
 \mathbb {Z} 	ℤ	Integer	\mathbb{Z}, \Z	&Zopf;	U+2124
 */
 // -- Number sets --
-const std::wstring NUMBER_SETS_ALGEBRAIC_NUMBER = L"\u1D538";
-const std::wstring NUMBER_SETS_COMPLEX_NUMBER   = L"\u2102";
-const std::wstring NUMBER_SETS_QUATERNION       = L"\u210D";
-const std::wstring NUMBER_SETS_NATURAL_NUMBER   = L"\u2115";
-const std::wstring NUMBER_SETS_OCTONION         = L"\u1D546";
-const std::wstring NUMBER_SETS_RATIONAL_NUMBER  = L"\u211A";
-const std::wstring NUMBER_SETS_REAL_NUMBER      = L"\u211D";
-const std::wstring NUMBER_SETS_SEDENION         = L"\u1D54A";
-const std::wstring NUMBER_SETS_INTEGER          = L"\u2124";
+struct NumberSets {
+    static const std::wstring ALGEBRAIC_NUMBER = L"\u1D538";
+    static const std::wstring COMPLEX_NUMBER   = L"\u2102";
+    static const std::wstring QUATERNION       = L"\u210D";
+    static const std::wstring NATURAL_NUMBER   = L"\u2115";
+    static const std::wstring OCTONION         = L"\u1D546";
+    static const std::wstring RATIONAL_NUMBER  = L"\u211A";
+    static const std::wstring REAL_NUMBER      = L"\u211D";
+    static const std::wstring SEDENION         = L"\u1D54A";
+    static const std::wstring INTEGER          = L"\u2124";
+};
 
 /*
 Intervals
@@ -74,10 +76,12 @@ Symbol	Usage	LaTeX	HTML	Unicode Hex
 U+005B/D
 */
 // -- Intervals --
-const std::wstring INTERVAL_LEFT_PARANTHESIS  = L"\u0028";
-const std::wstring INTERVAL_RIGHT_PARANTHESIS = L"\u0029";
-const std::wstring INTERVAL_LEFT_BRACKET      = L"\u005B";
-const std::wstring INTERVAL_RIGHT_BRACKET     = L"\u005D";
+struct Intervals {
+    static const std::wstring LEFT_PARANTHESIS  = L"\u0028";
+    static const std::wstring RIGHT_PARANTHESIS = L"\u0029";
+    static const std::wstring LEFT_BRACKET      = L"\u005B";
+    static const std::wstring RIGHT_BRACKET     = L"\u005D";
+};
 
 /*
 Mathematical constants
@@ -107,22 +111,24 @@ i
 �\tau 	τ	Prouhet–Thue–Morse constant	\tau	&tau;	{{tau}}	U+03C4	
 */
 // -- Mathematical constants --
-const std::wstring MATHEMATICAL_CONSTANTS_PI         = L"\u03C0";
-const std::wstring MATHEMATICAL_CONSTANTS_E          = L"\u0065";
-const std::wstring MATHEMATICAL_CONSTANTS_PHI        = L"\u03C6";
-const std::wstring MATHEMATICAL_CONSTANTS_VARPHI     = L"\u03D5";
-const std::wstring MATHEMATICAL_CONSTANTS_I          = L"\u0069";
-const std::wstring MATHEMATICAL_CONSTANTS_GAMMA      = L"\u03B3";
-const std::wstring MATHEMATICAL_CONSTANTS_EPSILON    = L"\u03B5";
-const std::wstring MATHEMATICAL_CONSTANTS_VAREPSILON = L"\u03F5";
-const std::wstring MATHEMATICAL_CONSTANTS_THETA      = L"\u03B8";
-const std::wstring MATHEMATICAL_CONSTANTS_VAR_THETA  = L"\u03D1";
-const std::wstring MATHEMATICAL_CONSTANTS_SIGMA      = L"\u03C3";
-const std::wstring MATHEMATICAL_CONSTANTS_VARSIGMA   = L"\u03C2";
-const std::wstring MATHEMATICAL_CONSTANTS_KAPPA      = L"\u03BA";
-const std::wstring MATHEMATICAL_CONSTANTS_LAMBDA     = L"\u03BB";
-const std::wstring MATHEMATICAL_CONSTANTS_MU         = L"\u03BC";
-const std::wstring MATHEMATICAL_CONSTANTS_TAU        = L"\u03C4";
+struct MathematicalConstants {
+    static const std::wstring PI         = L"\u03C0";
+    static const std::wstring E          = L"\u0065";
+    static const std::wstring PHI        = L"\u03C6";
+    static const std::wstring VARPHI     = L"\u03D5";
+    static const std::wstring I          = L"\u0069";
+    static const std::wstring GAMMA      = L"\u03B3";
+    static const std::wstring EPSILON    = L"\u03B5";
+    static const std::wstring VAREPSILON = L"\u03F5";
+    static const std::wstring THETA      = L"\u03B8";
+    static const std::wstring VAR_THETA  = L"\u03D1";
+    static const std::wstring SIGMA      = L"\u03C3";
+    static const std::wstring VARSIGMA   = L"\u03C2";
+    static const std::wstring KAPPA      = L"\u03BA";
+    static const std::wstring LAMBDA     = L"\u03BB";
+    static const std::wstring MU         = L"\u03BC";
+    static const std::wstring TAU        = L"\u03C4";
+};
 
 /*
 Complex numbers
@@ -216,12 +222,14 @@ arg
 \arg(z)	Polar coordinate system	\arg		
 */
 // -- Complex numbers --
-const std::wstring COMPLEX_NUMBERS_IMAGINARY_PART     = L"\u2111";
-const std::wstring COMPLEX_NUMBERS_REAL_PART          = L"\u211C";
-const std::wstring COMPLEX_NUMBERS_COMBINING_MACRON   = L"\u0304";
-const std::wstring COMPLEX_NUMBERS_COMBINING_OVERLINE = L"\u0305";
-const std::wstring COMPLEX_NUMBERS_ASTERISK           = L"\u002A";
-const std::wstring COMPLEX_NUMBERS_VERTICAL_LINE      = L"\u007C";
+struct ComplexNumbers {
+    static const std::wstring IMAGINARY_PART     = L"\u2111";
+    static const std::wstring REAL_PART          = L"\u211C";
+    static const std::wstring COMBINING_MACRON   = L"\u0304";
+    static const std::wstring COMBINING_OVERLINE = L"\u0305";
+    static const std::wstring ASTERISK           = L"\u002A";
+    static const std::wstring VERTICAL_LINE      = L"\u007C";
+};
 
 /*
 Elementary arithmetic operations
@@ -304,19 +312,21 @@ a^{-1}	Multiplicative inverse	^{-1}		U+207B
 \mp a	\mp	&mnplus;	U+2213	
 */
 // -- Elementary arithmetic operations --
-const std::wstring ELEMENTARY_ARITHMETIC_OPERATIONS_PLUS                   = L"\u002B";
-const std::wstring ELEMENTARY_ARITHMETIC_OPERATIONS_MINUS                  = L"\u2212";
-const std::wstring ELEMENTARY_ARITHMETIC_OPERATIONS_MULTIPLICATION         = L"\u22C5";
-const std::wstring ELEMENTARY_ARITHMETIC_OPERATIONS_TIMES                  = L"\u2A2F";
-const std::wstring ELEMENTARY_ARITHMETIC_OPERATIONS_COLON                  = L"\u003A";
-const std::wstring ELEMENTARY_ARITHMETIC_OPERATIONS_RATIO                  = L"\u2236";
-const std::wstring ELEMENTARY_ARITHMETIC_OPERATIONS_DIVISION               = L"\u2215";
-const std::wstring ELEMENTARY_ARITHMETIC_OPERATIONS_DIVIDE                 = L"\u00F7";
-const std::wstring ELEMENTARY_ARITHMETIC_OPERATIONS_FRACTION_SLASH         = L"\u2044";
-const std::wstring ELEMENTARY_ARITHMETIC_OPERATIONS_MULTIPLICATION_INVERSE = L"\u207B";
-const std::wstring ELEMENTARY_ARITHMETIC_OPERATIONS_ADDITIVE_INVERSE       = L"\u2212";
-const std::wstring ELEMENTARY_ARITHMETIC_OPERATIONS_PLUS_MINUS             = L"\u00B1";
-const std::wstring ELEMENTARY_ARITHMETIC_OPERATIONS_MINUS_PLUS             = L"\u2213";
+struct ElementaryArithmeticOperations {
+    static const std::wstring OPERATIONS_PLUS                   = L"\u002B";
+    static const std::wstring OPERATIONS_MINUS                  = L"\u2212";
+    static const std::wstring OPERATIONS_MULTIPLICATION         = L"\u22C5";
+    static const std::wstring OPERATIONS_TIMES                  = L"\u2A2F";
+    static const std::wstring OPERATIONS_COLON                  = L"\u003A";
+    static const std::wstring OPERATIONS_RATIO                  = L"\u2236";
+    static const std::wstring OPERATIONS_DIVISION               = L"\u2215";
+    static const std::wstring OPERATIONS_DIVIDE                 = L"\u00F7";
+    static const std::wstring OPERATIONS_FRACTION_SLASH         = L"\u2044";
+    static const std::wstring OPERATIONS_MULTIPLICATION_INVERSE = L"\u207B";
+    static const std::wstring OPERATIONS_ADDITIVE_INVERSE       = L"\u2212";
+    static const std::wstring OPERATIONS_PLUS_MINUS             = L"\u00B1";
+    static const std::wstring OPERATIONS_MINUS_PLUS             = L"\u2213";
+};
 
 /*
 Elementary functions
@@ -524,41 +534,43 @@ gcd
 {\displaystyle \gcd(1,2)}	Greatest common divisor	\gcd	gcd	
 */
 // --- Elementary functions ---
-const std::wstring ELEMENTARY_FUNCTIONS_SQUARE_ROOT             = L"\u221A";
-const std::wstring ELEMENTARY_FUNCTIONS_CUBE_ROOT               = L"\u221B";
-const std::wstring ELEMENTARY_FUNCTIONS_FOURTH_ROOT             = L"\u221C";
-const std::wstring ELEMENTARY_FUNCTIONS_NTH_ROOT                = L"\sqrt[n]{x}";
-const std::wstring ELEMENTARY_FUNCTIONS_PERCENTAGE              = L"\u0025";
-const std::wstring ELEMENTARY_FUNCTIONS_LEFT_PARENTHESIS        = L"\u0028";
-const std::wstring ELEMENTARY_FUNCTIONS_RIGHT_PARENTHESIS       = L"\u0029";
-const std::wstring ELEMENTARY_FUNCTIONS_LEFT_SQUARE_BRACKET     = L"\u005B";
-const std::wstring ELEMENTARY_FUNCTIONS_RIGHT_SQUARE_BRACKET    = L"\u005D";
-const std::wstring ELEMENTARY_FUNCTIONS_VERTICAL_LINE           = L"\u007C";
-const std::wstring ELEMENTARY_FUNCTIONS_LEFT_CURLY_BRACKET      = L"\u007B";
-const std::wstring ELEMENTARY_FUNCTIONS_RIGHT_CURLY_BRACKET     = L"\u007D";
-const std::wstring ELEMENTARY_FUNCTIONS_LEFT_CEILING            = L"\u2308";
-const std::wstring ELEMENTARY_FUNCTIONS_RIGHT_CEILING           = L"\u2309";
-const std::wstring ELEMENTARY_FUNCTIONS_LEFT_FLOOR              = L"\u230A";
-const std::wstring ELEMENTARY_FUNCTIONS_RIGHT_FLOOR             = L"\u230B";
-const std::wstring ELEMENTARY_FUNCTIONS_UPPER_LEFT_CORNER       = L"\u231C";
-const std::wstring ELEMENTARY_FUNCTIONS_UPPER_RIGHT_CORNER      = L"\u231D";
-const std::wstring ELEMENTARY_FUNCTIONS_LOWER_LEFT_CORNER       = L"\u231E";
-const std::wstring ELEMENTARY_FUNCTIONS_LOWER_RIGHT_CORNER      = L"\u231F";
-const std::wstring ELEMENTARY_FUNCTIONS_CAP_PRODUCT_FROWN       = L"\u2322";
-const std::wstring ELEMENTARY_FUNCTIONS_CUP_PRODUCT_SMILE       = L"\u2323";
-const std::wstring ELEMENTARY_FUNCTIONS_EXPONENTIAL_FUNCTION    = L"\\exp";
-const std::pair<std::wstring, std::wstring> ELEMENTARY_FUNCTIONS_LOGARITHM = std::make_pair(L"\\log", L"\\log_{}");
-const std::wstring ELEMENTARY_FUNCTIONS_NATURAL_LOGARITHM       = L"\\ln";
-const std::wstring ELEMENTARY_FUNCTIONS_BINARY_LOGARITHM        = L"\\lg";
-const std::wstring ELEMENTARY_FUNCTIONS_MINIMA                  = L"\\min";
-const std::wstring ELEMENTARY_FUNCTIONS_MAXIMA                  = L"\\max";
-const std::wstring ELEMENTARY_FUNCTIONS_INFIMUM                 = L"\\inf";
-const std::wstring ELEMENTARY_FUNCTIONS_SUPREMUM                = L"\\sup";
-const std::wstring ELEMENTARY_FUNCTIONS_LIMIT_INFERIOR          = L"\\liminf";
-const std::wstring ELEMENTARY_FUNCTIONS_LIMIT_INFERIOR_2        = L"\\varliminf";
-const std::wstring ELEMENTARY_FUNCTIONS_LIMIT_SUPERIOR          = L"\\limsup";
-const std::wstring ELEMENTARY_FUNCTIONS_LIMIT_SUPERIOR_2        = L"\\varlimsup";
-const std::wstring ELEMENTARY_FUNCTIONS_GREATEST_COMMON_DIVISOR = L"\\gcd";
+struct ElementaryFunctions {
+    static const std::wstring SQUARE_ROOT             = L"\u221A";
+    static const std::wstring CUBE_ROOT               = L"\u221B";
+    static const std::wstring FOURTH_ROOT             = L"\u221C";
+    static const std::wstring NTH_ROOT                = L"\sqrt[n]{x}";
+    static const std::wstring PERCENTAGE              = L"\u0025";
+    static const std::wstring LEFT_PARENTHESIS        = L"\u0028";
+    static const std::wstring RIGHT_PARENTHESIS       = L"\u0029";
+    static const std::wstring LEFT_SQUARE_BRACKET     = L"\u005B";
+    static const std::wstring RIGHT_SQUARE_BRACKET    = L"\u005D";
+    static const std::wstring VERTICAL_LINE           = L"\u007C";
+    static const std::wstring LEFT_CURLY_BRACKET      = L"\u007B";
+    static const std::wstring RIGHT_CURLY_BRACKET     = L"\u007D";
+    static const std::wstring LEFT_CEILING            = L"\u2308";
+    static const std::wstring RIGHT_CEILING           = L"\u2309";
+    static const std::wstring LEFT_FLOOR              = L"\u230A";
+    static const std::wstring RIGHT_FLOOR             = L"\u230B";
+    static const std::wstring UPPER_LEFT_CORNER       = L"\u231C";
+    static const std::wstring UPPER_RIGHT_CORNER      = L"\u231D";
+    static const std::wstring LOWER_LEFT_CORNER       = L"\u231E";
+    static const std::wstring LOWER_RIGHT_CORNER      = L"\u231F";
+    static const std::wstring CAP_PRODUCT_FROWN       = L"\u2322";
+    static const std::wstring CUP_PRODUCT_SMILE       = L"\u2323";
+    static const std::wstring EXPONENTIAL_FUNCTION    = L"\\exp";
+    static const std::pair<std::wstring, std::wstring> LOGARITHM = std::make_pair(L"\\log", L"\\log_{}");
+    static const std::wstring NATURAL_LOGARITHM       = L"\\ln";
+    static const std::wstring BINARY_LOGARITHM        = L"\\lg";
+    static const std::wstring MINIMA                  = L"\\min";
+    static const std::wstring MAXIMA                  = L"\\max";
+    static const std::wstring INFIMUM                 = L"\\inf";
+    static const std::wstring SUPREMUM                = L"\\sup";
+    static const std::wstring LIMIT_INFERIOR          = L"\\liminf";
+    static const std::wstring LIMIT_INFERIOR_2        = L"\\varliminf";
+    static const std::wstring LIMIT_SUPERIOR          = L"\\limsup";
+    static const std::wstring LIMIT_SUPERIOR_2        = L"\\varlimsup";
+    static const std::wstring GREATEST_COMMON_DIVISOR = L"\\gcd";
+};
 
 /*
 Trigonometric functions
@@ -661,22 +673,24 @@ coth
 {\displaystyle \coth x}	\coth	coth	
 */
 // --- Trigonometric functions ---
-const std::wstring TRIGONOMETRIC_FUNCTIONS_SINE                 = L"\\sin";
-const std::wstring TRIGONOMETRIC_FUNCTIONS_COSINE               = L"\\cos";
-const std::wstring TRIGONOMETRIC_FUNCTIONS_TANGENT              = L"\\tan";
-const std::wstring TRIGONOMETRIC_FUNCTIONS_SECANT               = L"\\sec";
-const std::wstring TRIGONOMETRIC_FUNCTIONS_COSSECANT            = L"\\csc";
-const std::wstring TRIGONOMETRIC_FUNCTIONS_COTANGENT            = L"\\cot";
-const std::wstring TRIGONOMETRIC_FUNCTIONS_ARCSINE              = L"\\arcsin";
-const std::wstring TRIGONOMETRIC_FUNCTIONS_ARCCOSINE            = L"\\arccos";
-const std::wstring TRIGONOMETRIC_FUNCTIONS_ARCTANGENT           = L"\\arctan";
-const std::wstring TRIGONOMETRIC_FUNCTIONS_ARCSECANT            = L"\\arcsec";
-const std::wstring TRIGONOMETRIC_FUNCTIONS_ARCCOSSECANT         = L"\\arccsc";
-const std::wstring TRIGONOMETRIC_FUNCTIONS_ARCCOTANGENT         = L"\\arccot";
-const std::wstring TRIGONOMETRIC_FUNCTIONS_HYPERBOLIC_SINE      = L"\\sinh";
-const std::wstring TRIGONOMETRIC_FUNCTIONS_HYPERBOLIC_COSINE    = L"\\cosh";
-const std::wstring TRIGONOMETRIC_FUNCTIONS_HYPERBOLIC_TANGENT   = L"\\tanh";
-const std::wstring TRIGONOMETRIC_FUNCTIONS_HYPERBOLIC_COTANGENT = L"\\coth";
+struct TrigonometricFunctions {
+    static const std::wstring TRIGONOMETRIC_FUNCTIONS_SINE                 = L"\\sin";
+    static const std::wstring TRIGONOMETRIC_FUNCTIONS_COSINE               = L"\\cos";
+    static const std::wstring TRIGONOMETRIC_FUNCTIONS_TANGENT              = L"\\tan";
+    static const std::wstring TRIGONOMETRIC_FUNCTIONS_SECANT               = L"\\sec";
+    static const std::wstring TRIGONOMETRIC_FUNCTIONS_COSSECANT            = L"\\csc";
+    static const std::wstring TRIGONOMETRIC_FUNCTIONS_COTANGENT            = L"\\cot";
+    static const std::wstring TRIGONOMETRIC_FUNCTIONS_ARCSINE              = L"\\arcsin";
+    static const std::wstring TRIGONOMETRIC_FUNCTIONS_ARCCOSINE            = L"\\arccos";
+    static const std::wstring TRIGONOMETRIC_FUNCTIONS_ARCTANGENT           = L"\\arctan";
+    static const std::wstring TRIGONOMETRIC_FUNCTIONS_ARCSECANT            = L"\\arcsec";
+    static const std::wstring TRIGONOMETRIC_FUNCTIONS_ARCCOSSECANT         = L"\\arccsc";
+    static const std::wstring TRIGONOMETRIC_FUNCTIONS_ARCCOTANGENT         = L"\\arccot";
+    static const std::wstring TRIGONOMETRIC_FUNCTIONS_HYPERBOLIC_SINE      = L"\\sinh";
+    static const std::wstring TRIGONOMETRIC_FUNCTIONS_HYPERBOLIC_COSINE    = L"\\cosh";
+    static const std::wstring TRIGONOMETRIC_FUNCTIONS_HYPERBOLIC_TANGENT   = L"\\tanh";
+    static const std::wstring TRIGONOMETRIC_FUNCTIONS_HYPERBOLIC_COTANGENT = L"\\coth";
+};
 
 /*
 Arithmetic comparison
@@ -787,26 +801,28 @@ Symbol	Unicode character	Usage	LaTeX	HTML	Unicode Hex
 {\displaystyle a\gtreqqless b}	\gtreqqless	&gtreqqless;	U+2A8C
 */
 // -- Arithmetic comparison --
-const std::wstring ARITHMETIC_COMPARISON_LESS_THAN                               = L"\u003C";
-const std::wstring ARITHMETIC_COMPARISON_GREATER_THAN                            = L"\u003E";
-const std::wstring ARITHMETIC_COMPARISON_LESS_THAN_OR_EQUAL_TO                   = L"\u2264";
-const std::wstring ARITHMETIC_COMPARISON_GREATER_THAN_OR_EQUAL_TO                = L"\u2265";
-const std::wstring ARITHMETIC_COMPARISON_LESS_THAN_OR_EQUAL_TO_FULL              = L"\u2266";
-const std::wstring ARITHMETIC_COMPARISON_GREATER_THAN_OR_EQUAL_TO_FULL           = L"\u2267";
-const std::wstring ARITHMETIC_COMPARISON_LESS_THAN_OR_EQUAL_TO_SLANTED           = L"\u2A7D";
-const std::wstring ARITHMETIC_COMPARISON_GREATER_THAN_OR_EQUAL_TO_SLANTED        = L"\u2A7E";
-const std::wstring ARITHMETIC_COMPARISON_LESS_THAN_NESTED                        = L"\u226A";
-const std::wstring ARITHMETIC_COMPARISON_GREATER_THAN_NESTED                     = L"\u226B";
-const std::wstring ARITHMETIC_COMPARISON_LESS_THAN_SIMILAR                       = L"\u2272";
-const std::wstring ARITHMETIC_COMPARISON_GREATER_THAN_SIMILAR                    = L"\u2273";
-const std::wstring ARITHMETIC_COMPARISON_LESS_THAN_APPROXIMATE                   = L"\u2A85";
-const std::wstring ARITHMETIC_COMPARISON_GREATER_THAN_APPROXIMATE                = L"\u2A86";
-const std::wstring ARITHMETIC_COMPARISON_LESS_THAN_GREATER_THAN                  = L"\u2276";
-const std::wstring ARITHMETIC_COMPARISON_GREATER_THAN_LESS_THAN                  = L"\u2277";
-const std::wstring ARITHMETIC_COMPARISON_LESS_THAN_OR_EQUAL_TO_GREATER_THAN      = L"\u22DA";
-const std::wstring ARITHMETIC_COMPARISON_GREATER_THAN_OR_EQUAL_TO_LESS_THAN      = L"\u22DB";
-const std::wstring ARITHMETIC_COMPARISON_LESS_THAN_OR_EQUAL_TO_GREATER_THAN_FULL = L"\u2A8B";
-const std::wstring ARITHMETIC_COMPARISON_GREATER_THAN_OR_EQUAL_TO_LESS_THAN_FULL = L"\u2A8C";
+struct ArithmeticComparison {
+    static const std::wstring LESS_THAN                               = L"\u003C";
+    static const std::wstring GREATER_THAN                            = L"\u003E";
+    static const std::wstring LESS_THAN_OR_EQUAL_TO                   = L"\u2264";
+    static const std::wstring GREATER_THAN_OR_EQUAL_TO                = L"\u2265";
+    static const std::wstring LESS_THAN_OR_EQUAL_TO_FULL              = L"\u2266";
+    static const std::wstring GREATER_THAN_OR_EQUAL_TO_FULL           = L"\u2267";
+    static const std::wstring LESS_THAN_OR_EQUAL_TO_SLANTED           = L"\u2A7D";
+    static const std::wstring GREATER_THAN_OR_EQUAL_TO_SLANTED        = L"\u2A7E";
+    static const std::wstring LESS_THAN_NESTED                        = L"\u226A";
+    static const std::wstring GREATER_THAN_NESTED                     = L"\u226B";
+    static const std::wstring LESS_THAN_SIMILAR                       = L"\u2272";
+    static const std::wstring GREATER_THAN_SIMILAR                    = L"\u2273";
+    static const std::wstring LESS_THAN_APPROXIMATE                   = L"\u2A85";
+    static const std::wstring GREATER_THAN_APPROXIMATE                = L"\u2A86";
+    static const std::wstring LESS_THAN_GREATER_THAN                  = L"\u2276";
+    static const std::wstring GREATER_THAN_LESS_THAN                  = L"\u2277";
+    static const std::wstring LESS_THAN_OR_EQUAL_TO_GREATER_THAN      = L"\u22DA";
+    static const std::wstring GREATER_THAN_OR_EQUAL_TO_LESS_THAN      = L"\u22DB";
+    static const std::wstring LESS_THAN_OR_EQUAL_TO_GREATER_THAN_FULL = L"\u2A8B";
+    static const std::wstring GREATER_THAN_OR_EQUAL_TO_LESS_THAN_FULL = L"\u2A8C";
+};
 
 // - Number theory -
 
