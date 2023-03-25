@@ -527,7 +527,7 @@ gcd
 const std::wstring ELEMENTARY_FUNCTIONS_SQUARE_ROOT = L"\u221A";
 const std::wstring ELEMENTARY_FUNCTIONS_CUBE_ROOT = L"\u221B";
 const std::wstring ELEMENTARY_FUNCTIONS_FOURTH_ROOT = L"\u221C";
-const std::string ELEMENTARY_FUNCTIONS_NTH_ROOT = "\sqrt[n]{x}";
+const std::wstring ELEMENTARY_FUNCTIONS_NTH_ROOT = "\sqrt[n]{x}";
 const std::wstring ELEMENTARY_FUNCTIONS_PERCENTAGE = L"\u0025";
 const std::wstring ELEMENTARY_FUNCTIONS_LEFT_PARENTHESIS = L"\u0028";
 const std::wstring ELEMENTARY_FUNCTIONS_RIGHT_PARENTHESIS = L"\u0029";
@@ -546,19 +546,19 @@ const std::wstring ELEMENTARY_FUNCTIONS_LOWER_LEFT_CORNER = L"\u231E";
 const std::wstring ELEMENTARY_FUNCTIONS_LOWER_RIGHT_CORNER = L"\u231F";
 const std::wstring ELEMENTARY_FUNCTIONS_CAP_PRODUCT_FROWN = L"\u2322";
 const std::wstring ELEMENTARY_FUNCTIONS_CUP_PRODUCT_SMILE = L"\u2323";
-const std::string ELEMENTARY_FUNCTIONS_EXPONENTIAL_FUNCTION = "\\exp";
-const std::pair<std::string, std::string> ELEMENTARY_FUNCTIONS_LOGARITHM = std::make_pair("\\log", "\\log_{}");
-const std::string ELEMENTARY_FUNCTIONS_NATURAL_LOGARITHM = "\\ln";
-const std::string ELEMENTARY_FUNCTIONS_BINARY_LOGARITHM = "\\lg";
-const std::string ELEMENTARY_FUNCTIONS_MINIMA = "\\min";
-const std::string ELEMENTARY_FUNCTIONS_MAXIMA = "\\max";
-const std::string ELEMENTARY_FUNCTIONS_INFIMUM = "\\inf";
-const std::string ELEMENTARY_FUNCTIONS_SUPREMUM = "\\sup";
-const std::string ELEMENTARY_FUNCTIONS_LIMIT_INFERIOR = "\\liminf";
-const std::string ELEMENTARY_FUNCTIONS_LIMIT_INFERIOR_2 = "\\varliminf";
-const std::string ELEMENTARY_FUNCTIONS_LIMIT_SUPERIOR = "\\limsup";
-const std::string ELEMENTARY_FUNCTIONS_LIMIT_SUPERIOR_2 = "\\varlimsup";
-const std::string ELEMENTARY_FUNCTIONS_GREATEST_COMMON_DIVISOR = "\\gcd";
+const std::wstring ELEMENTARY_FUNCTIONS_EXPONENTIAL_FUNCTION = "\\exp";
+const std::pair<std::wstring, std::wstring> ELEMENTARY_FUNCTIONS_LOGARITHM = std::make_pair("\\log", "\\log_{}");
+const std::wstring ELEMENTARY_FUNCTIONS_NATURAL_LOGARITHM = "\\ln";
+const std::wstring ELEMENTARY_FUNCTIONS_BINARY_LOGARITHM = "\\lg";
+const std::wstring ELEMENTARY_FUNCTIONS_MINIMA = "\\min";
+const std::wstring ELEMENTARY_FUNCTIONS_MAXIMA = "\\max";
+const std::wstring ELEMENTARY_FUNCTIONS_INFIMUM = "\\inf";
+const std::wstring ELEMENTARY_FUNCTIONS_SUPREMUM = "\\sup";
+const std::wstring ELEMENTARY_FUNCTIONS_LIMIT_INFERIOR = "\\liminf";
+const std::wstring ELEMENTARY_FUNCTIONS_LIMIT_INFERIOR_2 = "\\varliminf";
+const std::wstring ELEMENTARY_FUNCTIONS_LIMIT_SUPERIOR = "\\limsup";
+const std::wstring ELEMENTARY_FUNCTIONS_LIMIT_SUPERIOR_2 = "\\varlimsup";
+const std::wstring ELEMENTARY_FUNCTIONS_GREATEST_COMMON_DIVISOR = "\\gcd";
 
 /*
 Trigonometric functions
@@ -661,22 +661,22 @@ coth
 {\displaystyle \coth x}	\coth	coth	
 */
 // --- Trigonometric functions ---
-const std::string ELEMENTARY_FUNCTIONS_SINE = "\\sin";
-const std::string ELEMENTARY_FUNCTIONS_COSINE = "\\cos";
-const std::string ELEMENTARY_FUNCTIONS_TANGENT = "\\tan";
-const std::string ELEMENTARY_FUNCTIONS_SECANT = "\\sec";
-const std::string ELEMENTARY_FUNCTIONS_COSSECANT = "\\csc";
-const std::string ELEMENTARY_FUNCTIONS_COTANGENT = "\\cot";
-const std::string ELEMENTARY_FUNCTIONS_ARCSINE = "\\arcsin";
-const std::string ELEMENTARY_FUNCTIONS_ARCCOSINE = "\\arccos";
-const std::string ELEMENTARY_FUNCTIONS_ARCTANGENT = "\\arctan";
-const std::string ELEMENTARY_FUNCTIONS_ARCSECANT = "\\arcsec";
-const std::string ELEMENTARY_FUNCTIONS_ARCCOSSECANT = "\\arccsc";
-const std::string ELEMENTARY_FUNCTIONS_ARCCOTANGENT = "\\arccot";
-const std::string ELEMENTARY_FUNCTIONS_HYPERBOLIC_SINE = "\\sinh";
-const std::string ELEMENTARY_FUNCTIONS_HYPERBOLIC_COSINE = "\\cosh";
-const std::string ELEMENTARY_FUNCTIONS_HYPERBOLIC_TANGENT = "\\tanh";
-const std::string ELEMENTARY_FUNCTIONS_HYPERBOLIC_COTANGENT = "\\coth";
+const std::wstring ELEMENTARY_FUNCTIONS_SINE = "\\sin";
+const std::wstring ELEMENTARY_FUNCTIONS_COSINE = "\\cos";
+const std::wstring ELEMENTARY_FUNCTIONS_TANGENT = "\\tan";
+const std::wstring ELEMENTARY_FUNCTIONS_SECANT = "\\sec";
+const std::wstring ELEMENTARY_FUNCTIONS_COSSECANT = "\\csc";
+const std::wstring ELEMENTARY_FUNCTIONS_COTANGENT = "\\cot";
+const std::wstring ELEMENTARY_FUNCTIONS_ARCSINE = "\\arcsin";
+const std::wstring ELEMENTARY_FUNCTIONS_ARCCOSINE = "\\arccos";
+const std::wstring ELEMENTARY_FUNCTIONS_ARCTANGENT = "\\arctan";
+const std::wstring ELEMENTARY_FUNCTIONS_ARCSECANT = "\\arcsec";
+const std::wstring ELEMENTARY_FUNCTIONS_ARCCOSSECANT = "\\arccsc";
+const std::wstring ELEMENTARY_FUNCTIONS_ARCCOTANGENT = "\\arccot";
+const std::wstring ELEMENTARY_FUNCTIONS_HYPERBOLIC_SINE = "\\sinh";
+const std::wstring ELEMENTARY_FUNCTIONS_HYPERBOLIC_COSINE = "\\cosh";
+const std::wstring ELEMENTARY_FUNCTIONS_HYPERBOLIC_TANGENT = "\\tanh";
+const std::wstring ELEMENTARY_FUNCTIONS_HYPERBOLIC_COTANGENT = "\\coth";
 
 /*
 Arithmetic comparison
