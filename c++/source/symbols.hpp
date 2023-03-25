@@ -661,22 +661,22 @@ coth
 {\displaystyle \coth x}	\coth	coth	
 */
 // --- Trigonometric functions ---
-const std::wstring ELEMENTARY_FUNCTIONS_SINE                 = L"\\sin";
-const std::wstring ELEMENTARY_FUNCTIONS_COSINE               = L"\\cos";
-const std::wstring ELEMENTARY_FUNCTIONS_TANGENT              = L"\\tan";
-const std::wstring ELEMENTARY_FUNCTIONS_SECANT               = L"\\sec";
-const std::wstring ELEMENTARY_FUNCTIONS_COSSECANT            = L"\\csc";
-const std::wstring ELEMENTARY_FUNCTIONS_COTANGENT            = L"\\cot";
-const std::wstring ELEMENTARY_FUNCTIONS_ARCSINE              = L"\\arcsin";
-const std::wstring ELEMENTARY_FUNCTIONS_ARCCOSINE            = L"\\arccos";
-const std::wstring ELEMENTARY_FUNCTIONS_ARCTANGENT           = L"\\arctan";
-const std::wstring ELEMENTARY_FUNCTIONS_ARCSECANT            = L"\\arcsec";
-const std::wstring ELEMENTARY_FUNCTIONS_ARCCOSSECANT         = L"\\arccsc";
-const std::wstring ELEMENTARY_FUNCTIONS_ARCCOTANGENT         = L"\\arccot";
-const std::wstring ELEMENTARY_FUNCTIONS_HYPERBOLIC_SINE      = L"\\sinh";
-const std::wstring ELEMENTARY_FUNCTIONS_HYPERBOLIC_COSINE    = L"\\cosh";
-const std::wstring ELEMENTARY_FUNCTIONS_HYPERBOLIC_TANGENT   = L"\\tanh";
-const std::wstring ELEMENTARY_FUNCTIONS_HYPERBOLIC_COTANGENT = L"\\coth";
+const std::wstring TRIGONOMETRIC_FUNCTIONS_SINE                 = L"\\sin";
+const std::wstring TRIGONOMETRIC_FUNCTIONS_COSINE               = L"\\cos";
+const std::wstring TRIGONOMETRIC_FUNCTIONS_TANGENT              = L"\\tan";
+const std::wstring TRIGONOMETRIC_FUNCTIONS_SECANT               = L"\\sec";
+const std::wstring TRIGONOMETRIC_FUNCTIONS_COSSECANT            = L"\\csc";
+const std::wstring TRIGONOMETRIC_FUNCTIONS_COTANGENT            = L"\\cot";
+const std::wstring TRIGONOMETRIC_FUNCTIONS_ARCSINE              = L"\\arcsin";
+const std::wstring TRIGONOMETRIC_FUNCTIONS_ARCCOSINE            = L"\\arccos";
+const std::wstring TRIGONOMETRIC_FUNCTIONS_ARCTANGENT           = L"\\arctan";
+const std::wstring TRIGONOMETRIC_FUNCTIONS_ARCSECANT            = L"\\arcsec";
+const std::wstring TRIGONOMETRIC_FUNCTIONS_ARCCOSSECANT         = L"\\arccsc";
+const std::wstring TRIGONOMETRIC_FUNCTIONS_ARCCOTANGENT         = L"\\arccot";
+const std::wstring TRIGONOMETRIC_FUNCTIONS_HYPERBOLIC_SINE      = L"\\sinh";
+const std::wstring TRIGONOMETRIC_FUNCTIONS_HYPERBOLIC_COSINE    = L"\\cosh";
+const std::wstring TRIGONOMETRIC_FUNCTIONS_HYPERBOLIC_TANGENT   = L"\\tanh";
+const std::wstring TRIGONOMETRIC_FUNCTIONS_HYPERBOLIC_COTANGENT = L"\\coth";
 
 /*
 Arithmetic comparison
@@ -787,26 +787,26 @@ Symbol	Unicode character	Usage	LaTeX	HTML	Unicode Hex
 {\displaystyle a\gtreqqless b}	\gtreqqless	&gtreqqless;	U+2A8C
 */
 // -- Arithmetic comparison --
-const std::wstring ELEMENTARY_FUNCTIONS_LESS_THAN                               = L"\u003C";
-const std::wstring ELEMENTARY_FUNCTIONS_GREATER_THAN                            = L"\u003E";
-const std::wstring ELEMENTARY_FUNCTIONS_LESS_THAN_OR_EQUAL_TO                   = L"\u2264";
-const std::wstring ELEMENTARY_FUNCTIONS_GREATER_THAN_OR_EQUAL_TO                = L"\u2265";
-const std::wstring ELEMENTARY_FUNCTIONS_LESS_THAN_OR_EQUAL_TO_FULL              = L"\u2266";
-const std::wstring ELEMENTARY_FUNCTIONS_GREATER_THAN_OR_EQUAL_TO_FULL           = L"\u2267";
-const std::wstring ELEMENTARY_FUNCTIONS_LESS_THAN_OR_EQUAL_TO_SLANTED           = L"\u2A7D";
-const std::wstring ELEMENTARY_FUNCTIONS_GREATER_THAN_OR_EQUAL_TO_SLANTED        = L"\u2A7E";
-const std::wstring ELEMENTARY_FUNCTIONS_LESS_THAN_NESTED                        = L"\u226A";
-const std::wstring ELEMENTARY_FUNCTIONS_GREATER_THAN_NESTED                     = L"\u226B";
-const std::wstring ELEMENTARY_FUNCTIONS_LESS_THAN_SIMILAR                       = L"\u2272";
-const std::wstring ELEMENTARY_FUNCTIONS_GREATER_THAN_SIMILAR                    = L"\u2273";
-const std::wstring ELEMENTARY_FUNCTIONS_LESS_THAN_APPROXIMATE                   = L"\u2A85";
-const std::wstring ELEMENTARY_FUNCTIONS_GREATER_THAN_APPROXIMATE                = L"\u2A86";
-const std::wstring ELEMENTARY_FUNCTIONS_LESS_THAN_GREATER_THAN                  = L"\u2276";
-const std::wstring ELEMENTARY_FUNCTIONS_GREATER_THAN_LESS_THAN                  = L"\u2277";
-const std::wstring ELEMENTARY_FUNCTIONS_LESS_THAN_OR_EQUAL_TO_GREATER_THAN      = L"\u22DA";
-const std::wstring ELEMENTARY_FUNCTIONS_GREATER_THAN_OR_EQUAL_TO_LESS_THAN      = L"\u22DB";
-const std::wstring ELEMENTARY_FUNCTIONS_LESS_THAN_OR_EQUAL_TO_GREATER_THAN_FULL = L"\u2A8B";
-const std::wstring ELEMENTARY_FUNCTIONS_GREATER_THAN_OR_EQUAL_TO_LESS_THAN_FULL = L"\u2A8C";
+const std::wstring ARITHMETIC_COMPARISON_LESS_THAN                               = L"\u003C";
+const std::wstring ARITHMETIC_COMPARISON_GREATER_THAN                            = L"\u003E";
+const std::wstring ARITHMETIC_COMPARISON_LESS_THAN_OR_EQUAL_TO                   = L"\u2264";
+const std::wstring ARITHMETIC_COMPARISON_GREATER_THAN_OR_EQUAL_TO                = L"\u2265";
+const std::wstring ARITHMETIC_COMPARISON_LESS_THAN_OR_EQUAL_TO_FULL              = L"\u2266";
+const std::wstring ARITHMETIC_COMPARISON_GREATER_THAN_OR_EQUAL_TO_FULL           = L"\u2267";
+const std::wstring ARITHMETIC_COMPARISON_LESS_THAN_OR_EQUAL_TO_SLANTED           = L"\u2A7D";
+const std::wstring ARITHMETIC_COMPARISON_GREATER_THAN_OR_EQUAL_TO_SLANTED        = L"\u2A7E";
+const std::wstring ARITHMETIC_COMPARISON_LESS_THAN_NESTED                        = L"\u226A";
+const std::wstring ARITHMETIC_COMPARISON_GREATER_THAN_NESTED                     = L"\u226B";
+const std::wstring ARITHMETIC_COMPARISON_LESS_THAN_SIMILAR                       = L"\u2272";
+const std::wstring ARITHMETIC_COMPARISON_GREATER_THAN_SIMILAR                    = L"\u2273";
+const std::wstring ARITHMETIC_COMPARISON_LESS_THAN_APPROXIMATE                   = L"\u2A85";
+const std::wstring ARITHMETIC_COMPARISON_GREATER_THAN_APPROXIMATE                = L"\u2A86";
+const std::wstring ARITHMETIC_COMPARISON_LESS_THAN_GREATER_THAN                  = L"\u2276";
+const std::wstring ARITHMETIC_COMPARISON_GREATER_THAN_LESS_THAN                  = L"\u2277";
+const std::wstring ARITHMETIC_COMPARISON_LESS_THAN_OR_EQUAL_TO_GREATER_THAN      = L"\u22DA";
+const std::wstring ARITHMETIC_COMPARISON_GREATER_THAN_OR_EQUAL_TO_LESS_THAN      = L"\u22DB";
+const std::wstring ARITHMETIC_COMPARISON_LESS_THAN_OR_EQUAL_TO_GREATER_THAN_FULL = L"\u2A8B";
+const std::wstring ARITHMETIC_COMPARISON_GREATER_THAN_OR_EQUAL_TO_LESS_THAN_FULL = L"\u2A8C";
 
 // - Number theory -
 
